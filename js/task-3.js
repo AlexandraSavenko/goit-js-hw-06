@@ -1,3 +1,4 @@
+console.group("task-3");
 class StringBuilder {
   #value;
   constructor(value) {
@@ -7,10 +8,10 @@ class StringBuilder {
     return this.#value;
   }
   padEnd(str) {
-    this.#value = str + this.#value;
+    this.#value = this.#value + str;
   }
   padStart(str) {
-    this.#value = str + this.#value + str;
+    this.#value = str + this.#value;
   }
   padBoth(str) {
     this.#value = str + this.#value + str;
@@ -24,8 +25,4 @@ builder.padEnd("^");
 console.log(builder.getValue()); // "^.^"
 builder.padBoth("=");
 console.log(builder.getValue()); // "=^.^="
-
-// const one = ".";
-// const two = "^";
-// const three = "=";
-// console.log(three + two + one + two + three);
+console.groupEnd;
